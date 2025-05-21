@@ -344,3 +344,30 @@ Involves transferring knowledge from larger, more capable models (like powerful 
 * **Domain Knowledge Distillation from Large Language Model: An Empirical Study in the Autonomous Driving Domain** : This paper directly investigates distilling domain knowledge from LLMs (specifically ChatGPT) for the autonomous driving domain, developing a web-based distillation assistant.
 * **General VLM/VLLM Surveys** : These surveys often discuss how foundation models like CLIP are pre-trained on large-scale data and then their knowledge is transferred to downstream tasks through techniques like prompt tuning, visual adaptation, or knowledge distillation. This is a core concept in leveraging foundation models.
 * **Mixing Left and Right-Hand Driving Data in a Hierarchical Framework with LLM Generation** : While focused on data compatibility, this work uses an LLM-based sample generation method and techniques like MMD to reduce the domain gap between datasets from different driving rule domains (left-hand vs. right-hand drive). This can be seen as a form of domain adaptation or transfer learning for trajectory prediction models.
+
+## **Datasets and Benchmarks**
+
+
+* **nuScenes** : A large-scale multimodal dataset widely used for various AD tasks, including 3D object detection, tracking, and prediction. It features data from cameras, LiDAR, and radar, along with full sensor suites and map information. Several works like LightEMMA , OpenDriveVLA , and GPT-Driver  utilize nuScenes for evaluation or data generation. It is also used for tasks like BEV retrieval  and dense captioning.
+* **BDD-X (Berkeley DeepDrive eXplanation)** : This dataset provides textual explanations for driving actions, making it particularly relevant for training and evaluating interpretable AD models. DriveGPT4  and ADAPT  are evaluated on BDD-X. It contains video sequences with corresponding control signals and natural language narrations/reasoning.
+* **Waymo Open Dataset (WOMD)** : A large and diverse dataset with high-resolution sensor data, including LiDAR and camera imagery. Used in works like OmniDrive for Q&A data generation  and by LLMs Powered Context-aware Motion Prediction. Also used for scene simulation in ChatSim. WOMD-Reasoning is a language dataset built upon WOMD focusing on interaction descriptions and driving intentions.
+* **DriveLM** : A benchmark and dataset focusing on driving with graph visual question answering. TS-VLM is evaluated on DriveLM. It aims to assess perception, prediction, and planning reasoning through QA pairs in a directed graph, with versions for CARLA and nuScenes.
+* **LingoQA** : A benchmark and dataset specifically designed for video question answering in autonomous driving. It contains over 419k QA pairs from 28k unique video scenarios, covering driving reasoning, object recognition, action justification, and scene description. It also proposes the Lingo-Judge evaluation metric.
+* **CARLA Simulator & Datasets** : While a simulator, CARLA is extensively used to generate data and evaluate AD models in closed-loop settings. Works like LeapAD , LMDrive , and LangProp  use CARLA for experiments and data collection. DriveLM-Carla is a specific dataset generated using CARLA.
+* **Argoverse** : A dataset suite with a focus on motion forecasting, 3D tracking, and HD maps. Argoverse 2 is used in challenges like 3D Occupancy Forecasting.
+* **KITTI** : One of the pioneering datasets for autonomous driving, still used for tasks like 3D object detection and tracking.
+* **Cityscapes** : Focuses on semantic understanding of urban street scenes, primarily for semantic segmentation.
+* **UCU Dataset (In-Cabin User Command Understanding)** : Part of the LLVM-AD Workshop, this dataset contains 1,099 labeled user commands for autonomous vehicles, designed for training models to understand human instructions within the vehicle.
+* **MAPLM (Large-Scale Vision-Language Dataset for Map and Traffic Scene Understanding)** : Also from the LLVM-AD Workshop, MAPLM combines point cloud BEV and panoramic images for rich road scenario images and multi-level scene description data, used for QA tasks.
+* **NuPrompt** : A large-scale language prompt set based on nuScenes for driving scenes, consisting of 3D object-text pairs, used in Prompt4Driving.
+* **nuDesign** : A large-scale dataset (2300k sentences) constructed upon nuScenes via a rule-based auto-labeling methodology for 3D dense captioning.
+* **SUP-AD** : A dataset created for the DriveVLM project, constructed through a data mining and annotation pipeline, focusing on scene understanding for planning tasks.
+* **LaMPilot** : An interactive environment and dataset designed for evaluating LLM-based agents in a driving context, containing scenes for command tracking tasks.
+* **DRAMA (Joint Risk Localization and Captioning in Driving)** : Provides linguistic descriptions (with a focus on reasons) of driving risks associated with important objects.
+* **HAD (Human-To-Vehicle Advice for Self-Driving Vehicles)** : A dataset for grounding human advice for self-driving vehicles.
+* **Rank2Tell** : A multimodal ego-centric dataset for ranking importance levels of objects/events and generating textual reasons for the importance.
+* **OpenX-Embodiment Dataset** : While broader, it's a large-scale robotics dataset used in training generalist VLA models like RT-X, which have implications for AD.
+* **HighwayEnv** : A collection of environments for autonomous driving and tactical decision-making research, often used for RL-based approaches and LLM decision-making evaluations (e.g., by DiLu, MTD-GPT).
+
+
+

@@ -191,3 +191,24 @@ Decomposes the complex driving task into multiple levels of abstraction, often w
 * **LeapAD** : This system incorporates a dual-process decision-making module. The Analytic Process (System-II, using an LLM) performs thorough analysis and reasoning, accumulating experience. This experience is then transferred to a lightweight Heuristic Process (System-I) for swift, empirical decision-making. This can be seen as a cognitive hierarchy.
 * **Hierarchical Framework for Mixing Driving Data** : While focused on data compatibility for trajectory prediction, this work proposes a hierarchical framework, suggesting that different levels of processing or adaptation might be needed when dealing with complex data sources, which can inform hierarchical planning approaches.
 * **Hierarchical Planning Engine (General LLM Agent Concept)** : This describes a general concept for LLM agents where a high-level goal is decomposed into a structured, actionable plan (Phases -> Tasks -> Steps), which is a core idea in hierarchical planning.
+
+### **Categorization by Application Field in Decision-Making**
+
+This section organizes papers based on the specific aspect of the autonomous driving decision-making pipeline they primarily address.
+
+
+#### **Perception-Informed Decision-Making**
+
+These works focus on how enhanced perception, often through LLMs/VLMs, directly informs or enables better downstream decision-making. This involves not just detecting objects but understanding their context, relationships, and potential impact on driving strategy.
+
+
+
+* **TS-VLM** : Improves multi-view driving reasoning by dynamically fusing visual features based on text queries. This enhanced scene understanding directly supports more informed decision-making by providing better contextual accuracy from multiple viewpoints.
+* **OpenDriveVLA** : Conditions driving actions on 3D environmental perception, ego vehicle states, and driver commands. The hierarchical vision-language alignment projects 2D and 3D visual tokens into a unified semantic space, enabling perception to directly guide trajectory generation.
+* **DriveGPT4** : Processes multi-frame video inputs to interpret vehicle actions and offer reasoning. The decision to predict control signals is directly informed by its multimodal understanding of the visual scene and textual queries.
+* **LeapAD** : The VLM component is crucial for scene understanding, providing descriptions of critical objects that influence driving decisions. This perception output is the direct input to the dual-process decision-making module.
+* **DriveVLM** : Leverages VLMs for enhanced scene understanding (scene description, scene analysis) which then feeds into its hierarchical planning modules. The perception of long-tail critical objects is a key focus.
+* **VL-SAM** : Combines VLM recognition with SAM segmentation for open-ended object detection. While primarily a perception method, accurate detection and localization of all objects, including rare ones, is fundamental for safe decision-making.
+* **VLM-E2E** : Integrates textual representations (driver attentional cues from VLMs) into Bird's-Eye-View (BEV) features for semantic supervision, enabling the model to learn richer feature representations that explicitly capture driver's attentional semantics, directly impacting driving decisions.
+* **HiLM-D** : Focuses on high-resolution understanding in MLLMs for AD, specifically for identifying, explaining, and localizing risk objects (ROLISP task), which is a critical perceptual input for safe decision-making.
+* **Talk2BEV** : Provides a language-enhanced interface for BEV maps, allowing natural language queries to interpret complex driving scenes represented in BEV, thus informing situational awareness for decision-making.

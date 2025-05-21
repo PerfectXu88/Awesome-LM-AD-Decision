@@ -391,9 +391,6 @@ These repositories offer broader collections of resources that may overlap with 
 * **Awesome-World-Model (for Autonomous Driving and Robotics)**:
     * GitHub:(https://github.com/LMD0311/Awesome-World-Model) 
     * Description: Records, tracks, and benchmarks recent World Models for AD or Robotics, supplementary to a survey paper. Includes many VLA-related and generative model papers.
-* **Awesome-embodied-vla-va-vln (Embodied AI with VLA/VA/VLN)**:
-    * GitHub: [jonyzhang2023/awesome-embodied-vla-va-vln](https://github.com/jonyzhang2023/awesome-embodied-vla-va-vln) 
-    * Description: A curated list of research in embodied AI, focusing on VLA models, Vision-Language Navigation (VLN), Vision-Action (VA) models, and other MLLM-based embodied learning.
 * **Awesome-Multimodal-LLM-Autonomous-Driving**:
     * GitHub:(https://github.com/IrohXu/Awesome-Multimodal-LLM-Autonomous-Driving) 
     * Description: A systematic investigation of Multimodal LLMs in autonomous driving, covering background, tools, frameworks, datasets, and future directions.

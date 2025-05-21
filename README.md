@@ -406,11 +406,11 @@ These repositories offer broader collections of resources that may overlap with 
 If you find this repository useful, please consider citing this list:
 
 ```
-@misc{liu2025vlaroboticspaperslist,
-    title = {Awesome-LM-AD-Decision-making},
+@misc{liu2025lm4decisionofad,
+    title = {Awesome-LM-AD-Decision},
     author = {Jiaqi Liu},
     journal = {GitHub repository},
-    url = {https://github.com/Jiaaqiliu/Awesome-LM-AD},
+    url = {https://github.com/Jiaaqiliu/Awesome-LM-AD-Decision},
     year = {2025},
 }
 

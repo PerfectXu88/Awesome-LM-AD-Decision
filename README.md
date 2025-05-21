@@ -95,3 +95,39 @@ VLAs aim to create more generalist agents that can perceive, reason, and act, of
 
 * **OpenDriveVLA** : This is an end-to-end VLA model specifically designed for autonomous driving. It generates reliable driving actions conditioned on 3D environmental perception, ego vehicle states, and driver commands. Key methodological contributions include a hierarchical vision-language alignment process to bridge the modality gap between driving visual representations and language embeddings, and an autoregressive agent-env-ego interaction process to ensure spatially and behaviorally informed trajectory planning.
 
+### **Categorization by Research Direction**
+
+This section groups papers based on overarching research themes and objectives within AD decision-making.
+
+
+#### **End-to-End Driving Models**
+
+These models aim to learn a direct mapping from sensor inputs to driving actions or high-level plans, often minimizing handcrafted intermediate representations. The pursuit of end-to-end (E2E) models in autonomous driving is driven by the ambition to reduce error propagation inherent in modular pipelines and to potentially uncover novel, more effective driving strategies that might not emerge from separately optimized components. However, the "black box" nature and significant data requirements of traditional E2E deep learning models have been persistent challenges. The integration of LLMs, VLMs, and VLAs into E2E frameworks represents an effort to mitigate these issues by infusing these models with enhanced reasoning capabilities, better generalization from pre-training, and avenues for interpretability. This suggests a future where E2E AD systems are not purely opaque mappings but incorporate a semantic layer or reasoning backbone provided by foundation models, thus addressing key criticisms of earlier E2E approaches.
+
+
+
+* **LightEMMA** : This framework is specifically designed for evaluating various VLMs in an end-to-end fashion for autonomous driving planning tasks. It provides an open-source baseline workflow for integrating VLMs into E2E planning, enabling rapid prototyping.
+* **DriveGPT4** : DriveGPT4 is presented as an interpretable end-to-end autonomous driving system based on LLMs. It processes multi-frame video inputs and textual queries, predicts low-level vehicle control signals, and offers reasoning for its actions.
+* **OpenDriveVLA** : This VLA model is explicitly designed for end-to-end autonomous driving. It generates reliable driving trajectories conditioned on multimodal inputs including 3D environmental perception, ego vehicle state, and driver commands.
+* **ADAPT** : ADAPT proposes an end-to-end transformer-based architecture that jointly trains a driving captioning task and a vehicular control prediction task through a shared video representation, aiming for user-friendly narration and reasoning.
+* **LMDrive** : This work focuses on closed-loop end-to-end driving specifically with large language models, indicating a direct application of LLMs in the E2E driving pipeline.
+* **VLM-E2E** : This research aims to enhance end-to-end autonomous driving by using VLMs to provide attentional cues and fusing multimodal information (BEV and text features) for semantic supervision.
+* **VLM-AD** : This method leverages VLMs as teachers to provide reasoning-based text annotations, which serve as supplementary supervisory signals to train end-to-end AD pipelines, extending beyond standard trajectory labels.
+* **GenAD** : GenAD models autonomous driving as a trajectory generation problem, adopting an instance-centric scene tokenizer and a variational autoencoder for trajectory prior modeling in an E2E setup.
+
+
+
+#### **Interpretability and Explainable AI (XAI)**
+
+Focuses on making the decision-making processes of AD systems transparent and understandable to humans. The integration of LLMs and VLMs is pushing XAI in autonomous driving beyond simple attention maps or feature visualizations towards generating natural language explanations and justifications that are genuinely comprehensible to human users, including passengers and regulators. This is crucial for building public trust, facilitating regulatory approval, and enabling more effective human-AI collaboration in the driving context. The challenge, however, lies in ensuring that these generated explanations are faithful to the model's actual decision-making process and are not merely plausible-sounding rationalizations generated post-hoc. Future work will need to concentrate on methods that tightly couple the reasoning and explanation generation with the core decision logic of the AD system.
+
+
+
+* **LanguageMPC** : The use of LLM-generated high-level decisions is explicitly stated to improve interpretability in complex autonomous driving scenarios. The system aims to make the "thinking process" visible.
+* **LightEMMA** : This VLM framework employs Chain-of-Thought (CoT) prompting. CoT is used to enhance interpretability and facilitate structured reasoning within the VLM-based driving agents, allowing the model to output its reasoning steps.
+* **DriveGPT4** : A primary goal of DriveGPT4 is to develop an interpretable end-to-end autonomous driving solution. The MLLM is designed to interpret vehicle actions, offer pertinent reasoning, and address user queries, thereby making the system's behavior understandable.
+* **ADAPT** : This framework provides user-friendly natural language narrations and reasoning for each decision-making step of autonomous vehicular control and action. For example, it can output "[Action narration:] the car pulls over to the right side of the road, because the car is parking".
+* **LingoQA** : By benchmarking video question answering, LingoQA facilitates the development of models that can justify actions and describe scenes in natural language, directly contributing to the explainability of driving decisions.
+* **Traffic Regulation Retrieval Agent** : The reasoning module in this framework is explicitly designed to be interpretable, enhancing transparency in how traffic rules are identified, interpreted, and applied to driving decisions.
+* **General XAI in AVs** : These resources provide a broader context on XAI in autonomous vehicles. They emphasize that XAI serves to bridge complex technological capabilities with human understanding, addressing safety assurance, regulatory compliance, and public trust. XAI can provide real-time justifications for actions (e.g., sudden braking) and post-hoc explanations (e.g., visual heat maps, natural language descriptions).
+* **RAG-Driver** : This work aims to provide generalisable driving explanations by employing retrieval-augmented in-context learning within Multi-Modal Large Language Models.

@@ -371,3 +371,47 @@ Involves transferring knowledge from larger, more capable models (like powerful 
 
 
 
+
+
+
+### **Other Awesome Lists**
+
+These repositories offer broader collections of resources that may overlap with or complement the focus of this list.
+
+* **Awesome-LLM4AD (LLM for Autonomous Driving)**:
+    * GitHub:([https://github.com/Thinklab-SJTU/Awesome-LLM4AD](https://github.com/Thinklab-SJTU/Awesome-LLM4AD)) 
+    * Alternative Link:(http://codesandbox.io/p/github/sorokinvld/Awesome-LLM4AD) 
+    * Description: A curated list of research papers about LLM-for-Autonomous-Driving, categorized by planning, perception, question answering, and generation. Continuously updated.
+* **Awesome-VLLMs (Vision Large Language Models)**:
+    * GitHub: [JackYFL/awesome-VLLMs](https://github.com/JackYFL/awesome-VLLMs) 
+    * Description: Collects papers on Visual Large Language Models, with a dedicated section for "Vision-to-action" including "Autonomous driving" (Perception, Planning, Prediction).
+* **Awesome-Data-Centric-Autonomous-Driving**:
+    * GitHub:([https://github.com/LincanLi98/Awesome-Data-Centric-Autonomous-Driving](https://github.com/LincanLi98/Awesome-Data-Centric-Autonomous-Driving)) 
+    * Description: Focuses on data-driven AD solutions, including datasets, data mining, and closed-loop technologies. Mentions the role of LLMs/VLMs in scene understanding and decision-making.
+* **Awesome-World-Model (for Autonomous Driving and Robotics)**:
+    * GitHub:(https://github.com/LMD0311/Awesome-World-Model) 
+    * Description: Records, tracks, and benchmarks recent World Models for AD or Robotics, supplementary to a survey paper. Includes many VLA-related and generative model papers.
+* **Awesome-embodied-vla-va-vln (Embodied AI with VLA/VA/VLN)**:
+    * GitHub: [jonyzhang2023/awesome-embodied-vla-va-vln](https://github.com/jonyzhang2023/awesome-embodied-vla-va-vln) 
+    * Description: A curated list of research in embodied AI, focusing on VLA models, Vision-Language Navigation (VLN), Vision-Action (VA) models, and other MLLM-based embodied learning.
+* **Awesome-Multimodal-LLM-Autonomous-Driving**:
+    * GitHub:(https://github.com/IrohXu/Awesome-Multimodal-LLM-Autonomous-Driving) 
+    * Description: A systematic investigation of Multimodal LLMs in autonomous driving, covering background, tools, frameworks, datasets, and future directions.
+* **Awesome VLM Architectures**:
+    * GitHub: [gokayfem/awesome-vlm-architectures](https://github.com/gokayfem/awesome-vlm-architectures) 
+    * Description: Contains information on famous Vision Language Models (VLMs), including details about their architectures, training procedures, and datasets.
+
+## Citation
+
+If you find this repository useful, please consider citing this list:
+
+```
+@misc{liu2025vlaroboticspaperslist,
+    title = {Awesome-LM-AD-Decision-making},
+    author = {Jiaqi Liu},
+    journal = {GitHub repository},
+    url = {https://github.com/Jiaaqiliu/Awesome-LM-AD},
+    year = {2025},
+}
+
+```

@@ -212,3 +212,64 @@ These works focus on how enhanced perception, often through LLMs/VLMs, directly 
 * **VLM-E2E** : Integrates textual representations (driver attentional cues from VLMs) into Bird's-Eye-View (BEV) features for semantic supervision, enabling the model to learn richer feature representations that explicitly capture driver's attentional semantics, directly impacting driving decisions.
 * **HiLM-D** : Focuses on high-resolution understanding in MLLMs for AD, specifically for identifying, explaining, and localizing risk objects (ROLISP task), which is a critical perceptual input for safe decision-making.
 * **Talk2BEV** : Provides a language-enhanced interface for BEV maps, allowing natural language queries to interpret complex driving scenes represented in BEV, thus informing situational awareness for decision-making.
+
+#### **Behavioral Planning & Prediction**
+
+Concerns predicting the future behavior of other road users (vehicles, pedestrians, cyclists) and planning the ego-vehicle's behavior in response, often involving understanding intentions and social interactions.
+
+
+
+* **LanguageMPC** : The LLM performs scenario encoding, which includes predicting future trajectories of other vehicles and selecting the most likely one. This predictive capability informs its high-level action guidance for the ego vehicle.
+* **OpenDriveVLA** : Models dynamic relationships between the ego vehicle, surrounding agents, and static road elements through an autoregressive agent-env-ego interaction process. This explicit modeling of interactions is key for behavioral planning and prediction.
+* **AlphaDrive** : Tailored for high-level planning in autonomous driving, which inherently involves deciding on driving behaviors (e.g., lane changes, yielding) based on the current scene and predicted future states. The emergent multimodal planning capabilities also hint at understanding complex interactions.
+* **DriveVLM** : Includes modules for scene analysis that analyze possible intent-level behavior of critical objects, feeding into its hierarchical planning. This is directly related to predicting other agents' behaviors.
+* **Empowering AD with LLMs: A Safety Perspective** : Focuses on LLMs as intelligent decision-makers in behavioral planning, augmented with safety verifiers. This includes an LLM-enabled interactive behavior planning scheme.
+* **Agent-Driver** : The LLM agent performs task planning and motion planning based on perceived and predicted states of the environment, including interactions with other agents.
+* **LC-LLM (Explainable Lane-Change Intention and Trajectory Predictions with LLMs)** : Specifically uses LLMs for predicting lane-change intentions and trajectories, providing explainable predictions for this critical driving behavior.
+* **LLMs Powered Context-aware Motion Prediction** : Leverages GPT-4V to comprehend complex traffic scenarios and combines this contextual information with traditional motion prediction models (like MTR) to improve behavioral prediction.
+* **GPT-4V for Pedestrian Behavior Prediction** : Evaluates GPT-4V's capabilities for predicting pedestrian behavior, a crucial aspect of behavioral planning in urban environments.
+
+
+#### **Motion Planning & Trajectory Generation**
+
+Focuses on generating safe, comfortable, and feasible paths or sequences of waypoints for the autonomous vehicle to follow.
+
+
+
+* **LanguageMPC** : While the LLM provides high-level decisions, these are translated to guide a Model Predictive Controller (MPC) which performs the fine-grained trajectory planning and control.
+* **OpenDriveVLA** : A core capability is generating reliable driving trajectories conditioned on multimodal inputs, ensuring spatially and behaviorally informed trajectory planning through its agent-env-ego interaction model.
+* **LightEMMA** : Evaluates VLMs on the nuScenes *prediction* task, where predicted control actions are numerically integrated to produce a predicted trajectory, which is then compared against ground truth. This is a form of motion planning.
+* **DriveGPT4** : Predicts low-level vehicle control signals (speed, turning angle) in an end-to-end fashion, which implicitly defines a trajectory.
+* **AlphaDrive** : Specifically designed for autonomous driving planning, generating high-level plans that would then be refined into detailed trajectories. The rewards are tailored for planning accuracy and action importance.
+* **DriveVLM** : Features hierarchical planning modules. The DriveVLM-Dual system uses coarse, low-frequency waypoints from the VLM as an initial plan for a faster refining planner.
+* **GPT-Driver** : Models motion planning as a language modeling problem, leveraging the LLM to generate driving trajectories by aligning its output with human driving behavior.
+* **GenAD** : Models autonomous driving as a trajectory generation problem using an instance-centric scene tokenizer and a variational autoencoder for trajectory prior modeling.
+* **VLP (Vision Language Planning for Autonomous Driving)** : Proposes a Vision Language Planning model composed of ALP (Action Localization and Prediction) and SLP (Safe Local Planning) components to improve ADS from BEV reasoning and decision-making for planning.
+
+
+#### **Direct Control Signal Generation**
+
+Involves models that directly output low-level control commands for the vehicle, such as steering angle and acceleration/braking.
+
+
+
+* **DriveGPT4** : Explicitly states that it predicts low-level vehicle control signals (vehicle speed and turning angle) in an end-to-end fashion.
+* **LightEMMA** : The final stage of its Chain-of-Thought prompting explicitly outputs a sequence of predicted control actions (e.g., [(v1, c1), (v2, c2),...]) which are then numerically integrated to produce the predicted trajectory.
+* **ADAPT** : Jointly trains a vehicular control signal prediction task alongside driving captioning. The CSP head predicts control signals (e.g., speed, acceleration) based on video frames.
+* **QUAR-VLA** : For quadruped robots, QUART (the VLA model) generates rich control commands including base velocity, posture, and gait parameters, which are analogous to direct control signals for a vehicle.
+
+
+#### **Human-AI Interaction & Command Understanding**
+
+Focuses on enabling autonomous vehicles to understand and respond to human language commands, preferences, or queries, facilitating more natural and intuitive interaction.
+
+
+
+* **DriveGPT4** : Capable of processing textual queries from users and providing natural language responses, such as describing vehicle actions or explaining reasoning.
+* **LanguageMPC** : Allows driving behavior adjustment (e.g., conservative vs. aggressive) based on textual inputs from users or high-precision maps.
+* **Dolphins (Multimodal Language Model for Driving)** : Developed as a VLM-based conversational driving assistant, capable of understanding and responding to human interaction.
+* **Talk2BEV** : Provides a large vision-language model interface for bird’s-eye view maps, allowing users to interpret driving contexts through freeform natural language queries.
+* **Drive as You Speak / Talk-to-Drive** : Introduces an LLM-based framework to process verbal commands from humans and make autonomous driving decisions that satisfy personalized preferences for safety, efficiency, and comfort.
+* **Human-Centric Autonomous Systems With LLMs for User Command Reasoning** : Proposes leveraging LLMs' reasoning capabilities to infer system requirements from in-cabin users’ commands, using the UCU Dataset.
+* **ChatGPT as Your Vehicle Co-Pilot** : Designs a universal framework embedding LLMs as a vehicle "Co-Pilot" to accomplish specific driving tasks based on human intention and provided information.
+* **LingoQA** : While a benchmark, its focus on video question answering (including action justification and scene description) directly supports the development of systems that can interactively explain their understanding and decisions to humans.

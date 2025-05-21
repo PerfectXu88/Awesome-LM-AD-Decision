@@ -1,6 +1,6 @@
 # **Awesome LM for Autonomous Driving Decision-Making**
 
-A comprehensive list of awesome research, resources, and tools for leveraging Large Language Models (LLMs), Vision-Language Models (VLMs), and Vision-Language-Action (VLA) models in autonomous driving decision-making (and motion planning).
+A comprehensive list of awesome research, resources, and tools for leveraging Large Language Models (LLMs), Vision-Language Models (VLMs), and Vision-Language-Action (VLA) models in autonomous driving decision-making and motion planning.
 Contributions are welcome! 
 
 ## Table of Contents

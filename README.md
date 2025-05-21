@@ -273,3 +273,74 @@ Focuses on enabling autonomous vehicles to understand and respond to human langu
 * **Human-Centric Autonomous Systems With LLMs for User Command Reasoning** : Proposes leveraging LLMs' reasoning capabilities to infer system requirements from in-cabin users’ commands, using the UCU Dataset.
 * **ChatGPT as Your Vehicle Co-Pilot** : Designs a universal framework embedding LLMs as a vehicle "Co-Pilot" to accomplish specific driving tasks based on human intention and provided information.
 * **LingoQA** : While a benchmark, its focus on video question answering (including action justification and scene description) directly supports the development of systems that can interactively explain their understanding and decisions to humans.
+
+### **Categorization by Technical Route**
+
+This section classifies papers based on the core AI techniques or methodologies they employ or innovate upon.
+
+
+#### **Transformer Architectures & Variants**
+
+Many LLMs, VLMs, and VLAs are based on the Transformer architecture, known for its efficacy in handling sequential data and capturing long-range dependencies.
+
+
+
+* **ADAPT (Action-aware Driving Caption Transformer)** : Explicitly an end-to-end transformer-based architecture. It uses a Video Swin Transformer as the visual encoder and vision-language transformers for text generation and motion prediction.
+* **TeLL-Drive** : While the core "teacher" is an LLM (typically Transformer-based), it guides an *attention-based* Student DRL policy. Self-attention mechanisms are integral to Transformers.
+* **LanguageMPC** : Leverages Large Language Models (LLMs), which are predominantly Transformer-based, for high-level decision-making.
+* **TS-VLM** : While focusing on a novel pooling module, it's designed for Vision-Language Models, many of which have Transformer backbones for either vision, language, or fusion. The paper contrasts its pooling with costly attention mechanisms (core to Transformers).
+* **LightEMMA** : Evaluates various state-of-the-art VLMs, the majority of which (e.g., GPT-4o, Gemini, Claude, LLaMA-3.2-Vision, Qwen2.5-VL) are Transformer-based.
+* **OpenDriveVLA** : Builds upon open-source pre-trained large Vision-Language Models (VLMs) and language foundation models, which are typically Transformer architectures.
+* **DriveGPT4** : Based on Multimodal Large Language Models (MLLMs), which are extensions of Transformer-based LLMs.
+* **LeapAD** : The Analytic Process uses an LLM (Transformer-based), and the Heuristic Process uses a lightweight language model, which could also be Transformer-based.
+* **AlphaDrive** : Proposes a VLM (typically Transformer-based) tailored for high-level planning.
+* **DriveVLM** : Uses Vision Transformers (ViT) as the image tokenizer and Qwen (a Transformer-based LLM) as the LLM backbone.
+* **3D-VLA** : Built on top of a 3D-based Large Language Model (LLM), which implies a Transformer architecture.
+* **QUAR-VLA** : Proposes QUAdruped Robotic Transformer (QUART), explicitly naming its VLA model as Transformer-based.
+
+
+#### **Multimodal Fusion Techniques**
+
+These works explore or propose novel ways to combine information from different modalities (e.g., vision, language, LiDAR, radar, vehicle states) for improved decision-making. Effective fusion is critical for VLMs and VLAs. The challenge in multimodal fusion lies in effectively aligning and integrating information from disparate sources, such as pixel-level visual data and semantic language features. This becomes even more complex when dealing with multiple sensor inputs (cameras, LiDAR, radar) and dynamic temporal information inherent in driving.
+
+
+
+* **TS-VLM** : Introduces Text-Guided SoftSort Pooling (TGSSP) as a novel method for dynamic and query-aware multi-view visual feature aggregation, aiming for more efficient fusion than costly attention mechanisms.
+* **OpenDriveVLA** : Proposes a hierarchical vision-language alignment process to project both 2D and 3D structured visual tokens into a unified semantic space, explicitly addressing the modality gap for language-guided trajectory generation.
+* **DriveGPT4** : As an MLLM, it inherently processes and fuses multi-frame video inputs with textual queries to inform its reasoning and control signal prediction. It tokenizes video sequences and text/control signals.
+* **VLM-E2E** : Focuses on multimodal driver attention fusion. It integrates textual representations (attentional cues from VLMs) into Bird's-Eye-View (BEV) features for semantic supervision and introduces a BEV-Text learnable weighted fusion strategy to balance contributions from visual and textual modalities.
+* **DriveVLM** : The VLM architecture takes multiple image frames as input and uses Qwen as the LLM backbone, implying fusion of visual features with the language model's processing. The DriveVLM-Dual system also fuses perception information from the VLM with a traditional AV 3D perception module.
+* **3D-VLA** : Links 3D perception (point clouds, images, depth) with language and action through a generative world model. It uses a projector to efficiently align LLM output features with diffusion models for generating multimodal goal states.
+* **QUAR-VLA** : Integrates visual information (first-person camera images) and natural language instructions as inputs to generate rich, multi-dimensional control commands for quadruped robots.
+* **Holistic Autonomous Driving Understanding by Bird’s-Eye-View Injected Multi-Modal Large Models (BEV-InMLMM)** : Proposes integrating instruction-aware BEV features with existing MLLMs to improve holistic understanding.
+* **COMPASS (COntrastive Multimodal Pre-training for AutonomouS Systems)** : While a general pre-training approach for autonomous systems, COMPASS constructs a multimodal graph to connect signals from different modalities (e.g., camera, LiDAR, IMU, odometry) and maps them into factorized spatio-temporal latent spaces for motion and state representation. This is relevant for learning fused representations for decision-making.
+
+
+#### **Prompt Engineering (e.g., Chain-of-Thought)**
+
+Focuses on designing effective prompts to guide foundation models, especially LLMs and VLMs, to elicit desired reasoning processes and outputs for decision-making tasks. Chain-of-Thought (CoT) prompting, which encourages models to generate intermediate reasoning steps, is a prominent technique in this area. This method simulates human-like reasoning by breaking down complex problems into a sequence of manageable steps, leading to more accurate and transparent outputs, particularly for tasks requiring multi-step reasoning.
+
+
+
+* **TeLL-Drive** : Explicitly uses Chain-of-Thought (CoT) reasoning in its Teacher LLM. The LLM incorporates risk metrics, historical scenario retrieval, and domain heuristics into context-rich prompts to produce high-level driving strategies. The CoT approach helps the model iteratively evaluate collision severity, maneuver consequences, and broader traffic implications, reducing logical inconsistencies.
+* **LanguageMPC** : Devises cognitive pathways to enable comprehensive reasoning with LLMs, which involves sophisticated prompting to guide the LLM through scenario encoding, action guidance, and confidence adjustment. The system's reasoning ability is affirmed by its chain-of-thought approach.
+* **LightEMMA** : Employs a Chain-of-Thought (CoT) prompting strategy for its VLM-based autonomous driving agents. This is used to enhance interpretability and facilitate structured reasoning, with the final stage of the CoT explicitly outputting a sequence of predicted control actions.
+* **Agent-Driver** : The reasoning engine of this LLM-based agent is capable of chain-of-thought reasoning, among other capabilities like task planning and motion planning.
+* **VLM-AD** : Leverages VLMs as teachers to generate reasoning-based text annotations. The annotation process involves prompting a VLM (GPT-4o) with visual input (front-view image with projected future trajectory) and specific instructions to interpret the scenario, generate reasoning, and identify ego-vehicle actions.
+* **LLMs Powered Context-aware Motion Prediction** : Designs and conducts prompt engineering to enable unfine-tuned GPT-4V to comprehend complex traffic scenarios for motion prediction.
+* **Fine-tuning Vision-Language Models with Task Rewards for Multi-Step Goal-Directed Decision Making** : This work prompts the VLM to generate chain-of-thought (CoT) reasoning to enable efficient exploration of intermediate reasoning steps that lead to the final text-based action in an RL framework.
+* **OmniDrive** : Designs prompts for GPT-4 to generate coherent Q&A data for driving tasks by using simulated trajectories for counterfactual reasoning to identify key traffic elements and assess outcomes.
+
+
+#### **Knowledge Distillation & Transfer Learning**
+
+Involves transferring knowledge from larger, more capable models (like powerful proprietary LLMs/VLMs) or from diverse data sources to smaller, more efficient models suitable for deployment in autonomous vehicles, or adapting models trained in one domain (e.g., general web text/images) to the specific domain of autonomous driving.
+
+
+
+* **AlphaDrive** : Employs a two-stage planning reasoning training strategy that explicitly involves knowledge distillation. In the first stage, a large model (e.g., GPT-4o) generates a high-quality dataset of planning reasoning processes, which is then used to fine-tune the AlphaDrive model via Supervised Fine-Tuning (SFT), effectively distilling knowledge from the larger model.
+* **LeapAD** : The Analytic Process (System-II), which uses a powerful LLM, accumulates linguistic driving experience. This experience is then transferred to the lightweight language model of the Heuristic Process (System-I) through supervised fine-tuning. This is a form of knowledge transfer from a more capable reasoning system to a more efficient one.
+* **VLM-AD (Leveraging Vision-Language Models as Teachers for End-to-End Autonomous Driving)** : This method explicitly uses VLMs as "teachers" to automatically generate reasoning-based text annotations. These annotations then serve as supplementary supervisory signals to train end-to-end AD models. This process distills driving reasoning knowledge from the VLM to the student E2E model.
+* **Domain Knowledge Distillation from Large Language Model: An Empirical Study in the Autonomous Driving Domain** : This paper directly investigates distilling domain knowledge from LLMs (specifically ChatGPT) for the autonomous driving domain, developing a web-based distillation assistant.
+* **General VLM/VLLM Surveys** : These surveys often discuss how foundation models like CLIP are pre-trained on large-scale data and then their knowledge is transferred to downstream tasks through techniques like prompt tuning, visual adaptation, or knowledge distillation. This is a core concept in leveraging foundation models.
+* **Mixing Left and Right-Hand Driving Data in a Hierarchical Framework with LLM Generation** : While focused on data compatibility, this work uses an LLM-based sample generation method and techniques like MMD to reduce the domain gap between datasets from different driving rule domains (left-hand vs. right-hand drive). This can be seen as a form of domain adaptation or transfer learning for trajectory prediction models.

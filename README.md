@@ -69,7 +69,7 @@ Contributions are welcome!
 
 ### 📚 **Survey Papers**
 
-| Title | Year | Categories | Project  |
+| **Title** | **Year** | **Categories** | **Project**  |
 |-------|------|------------|------------------------------------------------------------------------|
 | [End-to-end Autonomous Driving: Challenges and Frontiers](https://ieeexplore.ieee.org/abstract/document/10614862) | TPAMI 2025 | End to End | [Project](https://github.com/OpenDriveLab/End-to-end-Autonomous-Driving) |
 | [On the Prospects of Incorporating Large Language Models (LLMs) in Automated Planning and Scheduling](https://ojs.aaai.org/index.php/ICAPS/article/view/31503) | ICAPS 2024 | Large Language Models | [Project](https://ai4society.github.io/LLM-Planning-Viz/)              |
@@ -81,7 +81,6 @@ Contributions are welcome!
 | [A survey for foundation models in autonomous driving](https://arxiv.org/abs/2402.01105) | Arxiv 2024 | Foundation Models |                                                                        |
 | [Foundation Models for Decision Making: Problems, Methods, and Opportunities](https://arxiv.org/abs/2303.04129) | Arxiv 2023 | Foundation Models |                                                                        |
 | [Forging Vision Foundation Models for Autonomous Driving: Challenges, Methodologies, and Opportunities](https://arxiv.org/abs/2401.08045) | Arxiv 2024 | Foundation Models |                                                                        |
-
 
 
 

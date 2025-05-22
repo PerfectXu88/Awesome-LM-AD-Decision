@@ -37,7 +37,7 @@ Contributions are welcome!
 ## **Survey papers**
 
 - End-to-end Autonomous Driving: Challenges and Frontiers [[paper](https://ieeexplore.ieee.org/abstract/document/10614862)][[project](https://github.com/OpenDriveLab/End-to-end-Autonomous-Driving)]![](https://img.shields.io/github/stars/OpenDriveLab/End-to-end-Autonomous-Driving.svg?style=social&label=Star&maxAge=2592000)
-- A Superalignment Framework in Autonomous Driving with Large Language Models
+- A Superalignment Framework in Autonomous Driving with Large Language Models[[paper](https://ieeexplore.ieee.org/abstract/document/10588403)]
 - Foundation Models in Robotics: Applications, Challenges, and the Future
 - Toward General-Purpose Robots via Foundation Models: A Survey and Meta-Analysis
 - A Survey on Vision-Language-Action Models for Embodied AI

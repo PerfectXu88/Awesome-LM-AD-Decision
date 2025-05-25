@@ -5,36 +5,36 @@ Contributions are welcome!
 
 ## Table of Contents
 
-- [Survey papers](#survey-papers)
-- [Research Papers](#research-papers) 
-    - [Categorization by Model Type](#categorization-by-model-type)
-        - [LLM-based Approaches](#llm-based-approaches)
-        - [VLM-based Approaches](#vlm-based-approaches)
-        - [VLA-based Approaches](#vla-based-approaches)
-    - [Categorization by Research Direction](#categorization-by-research-direction) 
-        - [End-to-End Driving Models](#end-to-end-driving-models)
-        - [Interpretability and Explainable AI (XAI)](#interpretability-and-explainable-ai-xai)
-        - [Safety-Critical Decision-Making & Long-Tail Scenarios](#safety-critical-decision-making--long-tail-scenarios) 
-        - [Reinforcement Learning for Decision-Making](#reinforcement-learning-for-decision-making)
-        - [World Models for Prediction and Planning](#world-models-for-prediction-and-planning)
-        - [Hierarchical Planning and Control](#hierarchical-planning-and-control)
-    - [Categorization by Application Field in Decision-Making](#categorization-by-application-field-in-decision-making) 
-        - [Perception-Informed Decision-Making](#perception-informed-decision-making) 
-        - [Behavioral Planning & Prediction](#behavioral-planning--prediction) 
-        - [Motion Planning & Trajectory Generation](#motion-planning--trajectory-generation) 
-        - [Direct Control Signal Generation](#direct-control-signal-generation)
-        - [Human-AI Interaction & Command Understanding](#human-ai-interaction--command-understanding)
-    - [Categorization by Technical Route](#categorization-by-technical-route) 
-        - [Transformer Architectures & Variants](#transformer-architectures--variants) 
-        - [Multimodal Fusion Techniques](#multimodal-fusion-techniques) 
-        - [Prompt Engineering](#prompt-engineering-eg-chain-of-thought) 
-        - [Knowledge Distillation & Transfer Learning](#knowledge-distillation--transfer-learning) 
-- [Datasets and Benchmarks](#datasets-and-benchmarks) 
-- [Other Awesome Lists](#other-awesome-lists)
+- [Survey papers](#📚survey-papers)
+- [Research Papers](#📄research-papers) 
+    - [Categorization by Model Type](#🧠categorization-by-model-type)
+        - [LLM-based Approaches](#🤖llm-based-approaches)
+        - [VLM-based Approaches](#👁️vlm-based-approaches)
+        - [VLA-based Approaches](#🧮vla-based-approaches)
+    - [Categorization by Research Direction](#🧭categorization-by-research-direction) 
+        - [End-to-End Driving Models](#🚗end-to-end-driving-models)
+        - [Interpretability and Explainable AI (XAI)](#🚗interpretability-and-explainable-ai-xai)
+        - [Safety-Critical Decision-Making & Long-Tail Scenarios](#⚠️safety-critical-decision-making--long-tail-scenarios) 
+        - [Reinforcement Learning for Decision-Making](#🎯reinforcement-learning-for-decision-making)
+        - [World Models for Prediction and Planning](#🌍world-models-for-prediction-and-planning)
+        - [Hierarchical Planning and Control](#🗺️hierarchical-planning-and-control)
+    - [Categorization by Application Field in Decision-Making](#🧪categorization-by-application-field-in-decision-making) 
+        - [Perception-Informed Decision-Making](#🧼perception-informed-decision-making) 
+        - [Behavioral Planning & Prediction](#👥behavioral-planning--prediction) 
+        - [Motion Planning & Trajectory Generation](#🛤️motion-planning--trajectory-generation) 
+        - [Direct Control Signal Generation](#🎮direct-control-signal-generation)
+        - [Human-AI Interaction & Command Understanding](#🗣️human-ai-interaction--command-understanding)
+    - [Categorization by Technical Route](#🛠️categorization-by-technical-route) 
+        - [Transformer Architectures & Variants](#🧱transformer-architectures--variants) 
+        - [Multimodal Fusion Techniques](#🔗multimodal-fusion-techniques) 
+        - [Prompt Engineering](#✏️prompt-engineering) 
+        - [Knowledge Distillation & Transfer Learning](#♻️knowledge-distillation--transfer-learning) 
+- [Datasets and Benchmarks](#📊datasets-and-benchmarks) 
+- [Other Awesome Lists](#🧾other-awesome-lists)
 
 
 
-### 📚 **Survey Papers**
+###  **📚Survey Papers**
 
 | **Title** | **Year**      | **Categories**       | **Project**                                                                                               |
 |-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------|----------------------|-----------------------------------------------------------------------------------------------------------|
@@ -55,7 +55,7 @@ Contributions are welcome!
 ## **📄Research Papers**
 
 
-### **🧠 Categorization by Model Type**
+###  **🧠Categorization by Model Type**
 
 This section further elaborates on papers based on the primary type of foundation model employed for decision-making.
 

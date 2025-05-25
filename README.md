@@ -5,7 +5,7 @@ Contributions are welcome!
 
 ## Table of Contents
 
-- [Survey papers](#📚survey-papers)
+- [Survey papers](#survey-papers)
 - [Research Papers](#📄research-papers) 
     - [Categorization by Model Type](#🧠categorization-by-model-type)
         - [LLM-based Approaches](#🤖llm-based-approaches)

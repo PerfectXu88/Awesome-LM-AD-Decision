@@ -6,31 +6,31 @@ Contributions are welcome!
 ## Table of Contents
 
 - [Survey papers](#survey-papers)
-- [Research Papers](#📄research-papers) 
-    - [Categorization by Model Type](#🧠categorization-by-model-type)
-        - [LLM-based Approaches](#🤖llm-based-approaches)
-        - [VLM-based Approaches](#👁️vlm-based-approaches)
-        - [VLA-based Approaches](#🧮vla-based-approaches)
-    - [Categorization by Research Direction](#🧭categorization-by-research-direction) 
-        - [End-to-End Driving Models](#🚗end-to-end-driving-models)
-        - [Interpretability and Explainable AI (XAI)](#🚗interpretability-and-explainable-ai-xai)
-        - [Safety-Critical Decision-Making & Long-Tail Scenarios](#⚠️safety-critical-decision-making--long-tail-scenarios) 
-        - [Reinforcement Learning for Decision-Making](#🎯reinforcement-learning-for-decision-making)
-        - [World Models for Prediction and Planning](#🌍world-models-for-prediction-and-planning)
-        - [Hierarchical Planning and Control](#🗺️hierarchical-planning-and-control)
-    - [Categorization by Application Field in Decision-Making](#🧪categorization-by-application-field-in-decision-making) 
-        - [Perception-Informed Decision-Making](#🧼perception-informed-decision-making) 
-        - [Behavioral Planning & Prediction](#👥behavioral-planning--prediction) 
-        - [Motion Planning & Trajectory Generation](#🛤️motion-planning--trajectory-generation) 
-        - [Direct Control Signal Generation](#🎮direct-control-signal-generation)
-        - [Human-AI Interaction & Command Understanding](#🗣️human-ai-interaction--command-understanding)
-    - [Categorization by Technical Route](#🛠️categorization-by-technical-route) 
-        - [Transformer Architectures & Variants](#🧱transformer-architectures--variants) 
-        - [Multimodal Fusion Techniques](#🔗multimodal-fusion-techniques) 
-        - [Prompt Engineering](#✏️prompt-engineering) 
-        - [Knowledge Distillation & Transfer Learning](#♻️knowledge-distillation--transfer-learning) 
-- [Datasets and Benchmarks](#📊datasets-and-benchmarks) 
-- [Other Awesome Lists](#🧾other-awesome-lists)
+- [Research Papers](#research-papers) 
+    - [Categorization by Model Type](#categorization-by-model-type)
+        - [LLM-based Approaches](#llm-based-approaches)
+        - [VLM-based Approaches](#vlm-based-approaches)
+        - [VLA-based Approaches](#vla-based-approaches)
+    - [Categorization by Research Direction](#categorization-by-research-direction) 
+        - [End-to-End Driving Models](#end-to-end-driving-models)
+        - [Interpretability and Explainable AI (XAI)](#interpretability-and-explainable-ai-xai)
+        - [Safety-Critical Decision-Making & Long-Tail Scenarios](#safety-critical-decision-making--long-tail-scenarios) 
+        - [Reinforcement Learning for Decision-Making](#reinforcement-learning-for-decision-making)
+        - [World Models for Prediction and Planning](#world-models-for-prediction-and-planning)
+        - [Hierarchical Planning and Control](#hierarchical-planning-and-control)
+    - [Categorization by Application Field in Decision-Making](#categorization-by-application-field-in-decision-making) 
+        - [Perception-Informed Decision-Making](#perception-informed-decision-making) 
+        - [Behavioral Planning & Prediction](#behavioral-planning--prediction) 
+        - [Motion Planning & Trajectory Generation](#motion-planning--trajectory-generation) 
+        - [Direct Control Signal Generation](#direct-control-signal-generation)
+        - [Human-AI Interaction & Command Understanding](#human-ai-interaction--command-understanding)
+    - [Categorization by Technical Route](#categorization-by-technical-route) 
+        - [Transformer Architectures & Variants](#transformer-architectures--variants) 
+        - [Multimodal Fusion Techniques](#multimodal-fusion-techniques) 
+        - [Prompt Engineering](#prompt-engineering) 
+        - [Knowledge Distillation & Transfer Learning](#knowledge-distillation--transfer-learning) 
+- [Datasets and Benchmarks](#datasets-and-benchmarks) 
+- [Other Awesome Lists](#other-awesome-lists)
 
 
 
@@ -109,7 +109,7 @@ VLMs bring visual understanding to the decision-making process, allowing for ric
 | [Training-Free Open-Ended Object Detection and Segmentation via Attention as Prompts](https://arxiv.org/abs/2410.05963) | <details><summary>Details</summary>This training-free framework combines a VLM (for generalized object recognition, e.g., recognizing rare objects in AD scenarios) with the Segment-Anything Model (SAM, for generalized object localization). It uses attention maps from the VLM as prompts for SAM to address open-ended object detection and segmentation, which is crucial for robust perception feeding into decision-making systems. </details> | NeurIPS 2024              |                                                              |
 
 
-#### **🧮 VLA-based Approaches**
+#### **🧮VLA-based Approaches**
 
 VLAs aim to create more generalist agents that can perceive, reason, and act, often in an end-to-end fashion. For autonomous driving, this means models that can take raw sensor data and high-level goals to produce driving actions. While VLAs offer the promise of true end-to-end decision-making by unifying perception, reasoning, and action generation , their application in safety-critical autonomous driving faces a significant hurdle: ensuring the reliability and verifiability of actions generated by these complex, often black-box, generative models. The potential for "hallucinated" or unexpected outputs from generative models is a recurring concern. A major research direction for VLAs in AD will involve developing methods for safety validation, uncertainty quantification, and robust fallback mechanisms. This might include hybrid approaches where VLA outputs are monitored or constrained by traditional safety layers, or novel training paradigms that explicitly optimize for safety and predictability.
 

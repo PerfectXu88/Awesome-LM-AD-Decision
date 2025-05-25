@@ -55,7 +55,7 @@ Contributions are welcome!
 ## **📄Research Papers**
 
 
-###  **🧠Categorization by Model Type**
+###  **🧠Categorization by Model  Type**
 
 This section further elaborates on papers based on the primary type of foundation model employed for decision-making.
 
